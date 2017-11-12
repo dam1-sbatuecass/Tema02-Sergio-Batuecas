@@ -56,7 +56,7 @@ public class Principal {
 			DocumentBuilder builder = factory.newDocumentBuilder();
 			DOMImplementation implementation = builder.getDOMImplementation();
 
-			Document document = implementation.createDocument(null, "Contactos.obj", null);
+			Document document = implementation.createDocument(null, "Contactos", null);
 
 			document.setXmlVersion("1.0");// Asignamos la version de nuestro xml
 
@@ -65,7 +65,7 @@ public class Principal {
 
 			while (it.hasNext()) {
 				Contacto contacto = (Contacto) it.next();
-				Element nodo = document.createElement("Conntacto");// Nodo persona
+				Element nodo = document.createElement("Contacto");// Nodo persona
 
 				document.getDocumentElement().appendChild(nodo);
 				// Dentro del nodo persona nos creamos sus nodos hijos/elementos
